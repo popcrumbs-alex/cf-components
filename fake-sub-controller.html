@@ -1,8 +1,6 @@
 <script>
   //FAKE BUMP SELECTION HANDLER
   //CHANGE DATA-TITLE name TO WHATEVER FAKE BUMP TITLE IS
-  //Put script tags around each function
-  //ORDER FORM FUNCTION
   //Change order summary element title to order-summary or match the data-title to what ever the title of the order summary is
   (function () {
     class Subscription {
@@ -56,9 +54,12 @@
     }
 
     const SubHandler = new Subscription();
+
     const fSub = () => document.querySelector('[data-title="fake-sub"] input');
+    //change the data-title to whatever the title of the order summary is, if different
     const orderSummary = () =>
       document.querySelector('[data-title="order-summary"]');
+    //order summary element, if order summary exists on page
     const HTMLTOINSERT = () => {
       const div = document.createElement("div");
       div.classList.add("hide-sub-summary");
